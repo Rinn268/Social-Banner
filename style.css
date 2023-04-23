@@ -1,0 +1,93 @@
+:root {
+  --gry: #292929;
+  --blk: #000000;
+  --wht: #ffffff;
+  --fa: #3b5998;
+  --tw: #0aacee;
+  --in: #d9194b;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--gry);
+}
+.social-icons {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.social-icons .link {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+  border-radius: 50%;
+  border: 2px dotted var(--wht);
+  /* background-clip: content-box; */
+  padding: 10px;
+  margin: 0 15px;
+  font-size: 40px;
+  color: var(--wht);
+  transition: 0.5s;
+}
+.social-icons .link.facebook {
+  background-color: var(--fa);
+}
+.social-icons .link.twitter {
+  background-color: var(--tw);
+}
+.social-icons .link.instagram {
+  /* background-color: var(--in); */
+  background: radial-gradient(
+      circle farthest-corner at 35% 90%,
+      #fec564,
+      transparent 50%
+    ),
+    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 20% -50%,
+      #5258cf,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 60% -20%,
+      #893dc2,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+    linear-gradient(
+      #6559ca,
+      #bc318f 30%,
+      #e33f5f 50%,
+      #f77638 70%,
+      #fec66d 100%
+    );
+}
+.social-icons .link i {
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.social-icons .link:hover {
+  padding: 20px;
+  margin-left: -5px;
+  transform: translate(10px) rotate(360deg);
+}
